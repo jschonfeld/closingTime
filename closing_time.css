@@ -389,11 +389,44 @@ div#footer {
     width: 133.99147033691406px;
 }
 .icon{
- cursor:pointer;   
+    cursor:pointer;   
     background-repeat:no-repeat;
     background-position:center;
 }
+
+
+#result_tab figure{
+      display: table;
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      font-family: AvenirNextCondensed-Medium, 'AvenirNextLTW01-MediumC 721311', 'Arial Narrow', Verdana, sans-serif;
+      }
+
 #result_tab img{
-    margin:30px;
+    //margin: 30px;
     cursor:pointer;
 }
+
+
+#result_tab figcaption{
+    display: table-caption; 
+    caption-side: bottom;
+}
+
+
+.closed{
+opacity:0.4;
+filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
+/** Error handling***/
+.highlight {
+    -webkit-box-shadow:5px 5px 5px black; 
+    -moz-box-shadow: 5px 5px 5px black; 
+    box-shadow:5px 5px 5px black; 
+    -webkit-box-shadow:0 0 15px red; 
+    -moz-box-shadow: 0 0 15px red; 
+    box-shadow:0 0 15px red; 
+}
+	

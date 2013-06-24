@@ -54,10 +54,16 @@ $('#result_tab').empty();
                 $("#submit").click(function(){
      $(function()             {$.getJSON('json-data.php',{category: $('.location_field').val()}, function(data) {
                    $(data).each(function(k,v){        
-                         $('<img>',{
+                       /*$('<img>',{
+                           class:v.open,
                            title:v.title,
                            src:v.img
-                                   }).appendTo($('#result_tab'));
+                           
+                                  })*/
+                          $('<figure>').html('\
+    				<img title="'+v.title+'"  src="'+v.img+'" />\
+					<figcaption>'+v.open+'</figcaption>')
+                                        .appendTo($('#result_tab'));
 
                                              })
                                      });
@@ -83,4 +89,5 @@ $('.category').click(function(){
 </script>
 
 </body>
-</html>  
+</html>	
+	

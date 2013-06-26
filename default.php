@@ -43,7 +43,7 @@
 //Redirect the enter button:
 
 //Bind this keypress function to all of the input tags
-    	$("input").keypress(function (evt) {
+		$("input").keypress(function (evt) {
 //Deterime where our character code is coming from within the event
           var charCode = evt.charCode || evt.keyCode;
                   if (charCode  == 13) { //Enter key's keycode

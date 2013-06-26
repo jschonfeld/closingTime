@@ -5,7 +5,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
 <script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?key=AIzaSyB6IgqzEzPeXmS7ETftJZLXRkMQroUqFK4&sensor=false'></script>
 </head>
-<body>
+<body onload="load()">
         <div id="search_area">
         <div id="inner">
             <img  src="logo5.png" style="float:left;" />
@@ -32,7 +32,9 @@
         </div>
         <div class="grid_5" id="info_panel">
            <h3 id="location_header"></h3>
-           <div id="map_canvas"></div>
+           <div id="map_canvas">
+		   <iframe id="google_map" width="500" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=""></iframe>
+		   </div>
         </div>
     </div>
     <div id="footer">Closing Time 2013, Yehuda Schonfeld | Reuben Moddel </div>
@@ -79,7 +81,26 @@
 			);
                 }); 
 
-////////////***************************//////////////
+
+
+	               var c = function(pos){
+				var lat = pos.coords.latitude,
+				    long = pos.coords.longitude,
+				    coords = lat + ', ' + long;
+			
+			document.getElementById('google_map').setAttribute('src', 'https://maps.google.com/?q=' + coords + '&z=60&output=embed');
+			}
+			
+		
+			function load() {
+			navigator.geolocation.getCurrentPosition(c);
+			return false;
+                        }
+
+
+///////////////////////////*******************************/////////////////////////////
+
+
 // This function get all the maps .
 function initialize(lat,long){//,address) {
     myLatlng = new google.maps.LatLng(lat,long),

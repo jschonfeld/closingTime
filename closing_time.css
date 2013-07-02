@@ -338,6 +338,7 @@ div#info_panel {
     height: 600px;
     border-radius:10px;
     margin-bottom: 10px;
+    text-align:center;
 }
 div#footer {
     text-align: center;
@@ -425,7 +426,7 @@ filter:alpha(opacity=40); /* For IE8 and earlier */
 
 #google_map{
 margin: 0 auto; 
-width:100%
+width:90%
 
 }
 

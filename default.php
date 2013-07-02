@@ -33,7 +33,7 @@
         <div class="grid_5" id="info_panel">
            <h3 id="location_header"></h3>
            <div id="map_canvas">
-		   <iframe id="google_map" width="500" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=""></iframe>
+		   <iframe id="google_map" width="500" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=""></iframe>
 		   </div>
         </div>
 

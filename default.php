@@ -36,6 +36,21 @@
 		   <iframe id="google_map" width="500" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=""></iframe>
 		   </div>
         </div>
+
+        <div class="grid_7 push_1" id="click_to_slide">
+           <div id="category_list">   
+               <span class="day" id="sun">Sun</span>
+               <span class="day" id="mon">Mon</span>
+               <span class="day" id="tue">Tue</span>
+               <span class="day" id="wed">Wed</span>
+               <span class="day" id="thur">Thur</span>
+               <span class="day" id="fri">Fri</span>
+               <span class="day" id="sat">Sat</span>
+           </div>
+        </div>
+
+     <div class="grid_7 push_1" id="slide_me_down"></div>
+
     </div>
     <div id="footer">Closing Time 2013, Yehuda Schonfeld | Reuben Moddel </div>
     <div class="clear"></div>
@@ -107,7 +122,7 @@ function initialize(lat,long){//,address) {
         myOptions = {
             center: myLatlng,
             zoom: 15,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            mapTypeId: google.maps.MapTypeId.TERRAIN
         },
         map = new google.maps.Map(document.getElementById('map_canvas'),myOptions),
         marker = new google.maps.Marker({
@@ -135,7 +150,32 @@ $('.category').click(function(){
        });
 });
 
+/////////////////*******************///////////////
+//Week div Slider controls:
+$(document).ready(function () {
+    $('.day').click(function () {
+        var me = $(this);
+        $('#slide_me_down').slideDown();
+        if(me.hasClass('active')){
+       		$('#slide_me_down').slideUp();
+        	$(this).removeClass('active');
+        }else{
+            $('.active').removeClass('active');	
+            $(this).addClass('active'); 
+            $('#slide_me_down').html(me.attr('id'));
+        }
+       
+    }); 
+                               
+   /*  $('#finance').live('click', function () { 
+         $('#slide_me_down').slideToggle();     
+     });                               
+                               
+   */
 
+
+
+});
 
 </script>
 

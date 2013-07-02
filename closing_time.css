@@ -306,14 +306,14 @@ background-color:white;
     color:gray;
 }
 #category_bar {
-    background-color: #C7CAD1;
+    //background-color: #C7CAD1;
+    background-color:#1D2E41;
     text-align: center;
     height: 65px;
     margin-bottom: 10px;
     width: 100%;
     height: 40px;
     text-align: center;
-    
     background-position: 0 0;
     background-image: url(data:image/png;
     base64, iVBORw0KGgoAAAANSUhEUgAAAAIAAAAUCAAAAACCUrN+AAAAFUlEQVQIHWP0ZmD5z8DyD4wgDKK5AD5hE3u4jBM0AAAAAElFTkSuQmCC);
@@ -330,6 +330,8 @@ div#result_tab {
     height: 600px;
     border-radius:10px;
     overflow: auto;
+    text-align: center;
+    font-family: AvenirNextCondensed-Medium, 'AvenirNextLTW01-MediumC 721311', 'Arial Narrow', Verdana, sans-serif;
 }
 div#info_panel {
     background-color: #D2E0FA;
@@ -343,7 +345,8 @@ div#footer {
     height: 65px;
     margin-bottom: 10px;
     color: #AAA;
-      
+    margin-top: 50px;
+    	
     border-top: none;
     border-left:none;
     border-right:none;
@@ -400,7 +403,7 @@ div#footer {
       display: inline-block;
       vertical-align: top;
       text-align: center;
-      font-family: AvenirNextCondensed-Medium, 'AvenirNextLTW01-MediumC 721311', 'Arial Narrow', Verdana, sans-serif;
+      
       }
 
 #result_tab img{
@@ -420,6 +423,12 @@ opacity:0.4;
 filter:alpha(opacity=40); /* For IE8 and earlier */
 }
 
+#google_map{
+margin: 0 auto; 
+width:100%
+
+}
+
 /** Error handling***/
 .highlight {
     -webkit-box-shadow:5px 5px 5px black; 
@@ -429,4 +438,44 @@ filter:alpha(opacity=40); /* For IE8 and earlier */
     -moz-box-shadow: 0 0 15px red; 
     box-shadow:0 0 15px red; 
 }
-	
+/* ---------------------The following controls the week Div --------------------------*/
+
+#click_to_slide {      
+    width: 800px;     
+    height: 40px;        
+    border-width:1px;
+    border-bottom-style:solid;
+    margin-top: 50px;
+    text-align: center; 
+    border-top: 1px;
+}
+#click_to_slide span:hover
+{
+background-color: #D2E0FA;    
+    
+}
+#slide_me_down {     
+    display: none;
+    width: 800px;    
+    height: 100px;     
+    background-color: white;
+    text-align:center;
+    font-size:2em;
+    color: #1D2E41;
+    
+}
+
+.day {
+    cursor: pointer;
+    olor: #1D2E41;
+    display: inline-block;
+    font-family: AvenirNextCondensed-Medium, 'AvenirNextLTW01-          MediumC 721311', 'Arial Narrow', Verdana, sans-serif;
+    font-size: 16.363636016845703px;
+    height: 40px;
+    line-height: 41.9886360168457px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 110px;
+}
+		

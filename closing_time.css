@@ -447,7 +447,7 @@ width:90%
     border-width:1px;
     border-bottom-style:solid;
     margin-top: 50px;
-    text-align: center; 
+    
     border-top: 1px;
 }
 #click_to_slide span:hover
@@ -456,19 +456,38 @@ background-color: #D2E0FA;
     
 }
 #slide_me_down {     
+    
     display: none;
     width: 800px;    
-    height: 100px;     
+    height: 200px;     
     background-color: white;
-    text-align:center;
+   // text-align:center;
     font-size:2em;
     color: #1D2E41;
-    
+    white-space: nowrap;
+    overflow: auto; 
 }
 
+#slide_me_down figure{
+      display: table;
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      }
+
+#slide_me_down img{
+    //margin: 30px;
+    cursor:pointer;
+}
+
+
+#slide_me_down figcaption{
+    display: table-caption; 
+    caption-side: bottom;
+}
 .day {
     cursor: pointer;
-    olor: #1D2E41;
+    color: #1D2E41;
     display: inline-block;
     font-family: AvenirNextCondensed-Medium, 'AvenirNextLTW01-          MediumC 721311', 'Arial Narrow', Verdana, sans-serif;
     font-size: 16.363636016845703px;

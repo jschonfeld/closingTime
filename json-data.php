@@ -13,72 +13,83 @@ class Store
 $starbucks = new Store();
 $starbucks->name = 'starbucks';
 $starbucks->title = 'Starbucks';
-$starbucks->img = 'http://farm8.staticflickr.com/7284/8736593687_d3e84f8aee_m.jpg';
+$starbucks->img = 'logos/fast_food/starbucks.gif';
+$starbucks->open = 'open';
 
-$bmw = new Store();	
-$bmw->name = 'bmw';
-$bmw->title = 'BMW';
-$bmw->img = 'http://farm8.staticflickr.com/7287/8736585773_3cd58bf685_m.jpg';
+$burger_king= new Store();	
+$burger_king->name = 'burger king';
+$burger_king->title = 'Burger King';
+$burger_king->img = 'logos/fast_food/burger_king.gif';
+$burger_king->open = 'open';
 
-$target = new Store();	
-$target->name = 'target';
-$target->title = 'Target';
-$target->img = 'http://farm8.staticflickr.com/7281/8737764014_e83a5f771d_m.jpg';
+$chick_fil_a= new Store();	
+$chick_fil_a->name = 'chick-fil-a';
+$chick_fil_a->title = 'Chick_Fil_A';
+$chick_fil_a->img = 'logos/fast_food/chick_fil_a.gif';
+$chick_fil_a->open = 'open';
 
-$ups = new Store();	
-$ups->name = 'ups';
-$ups->title = 'UPS';
-$ups->img = 'http://farm8.staticflickr.com/7287/8736585773_3cd58bf685_m.jpg';
 
-$office_depot = new Store();	
-$office_depot->name = 'office_depot';
-$office_depot->title = 'Office Depot';
-$office_depot->img = 'http://farm8.staticflickr.com/7286/8737763776_c74891e015_m.jpg';
+$chipotle= new Store();	
+$chipotle->name = 'chipotle';
+$chipotle->title = 'Chipotle';
+$chipotle->img = 'logos/fast_food/chipotle.png';
+$chipotle->open = 'open';
 
-$ferrari = new Store();	
-$ferrari->name = 'ferrari';
-$ferrari->title = 'Ferrari';
-$ferrari->img = 'http://farm8.staticflickr.com/7288/8739392800_6ca7cb5c15_m.jpg';
+$dominos = new Store();	
+$dominos->name = 'dominos';
+$dominos->title = 'Dominos';
+$dominos->img = 'logos/fast_food/dominos.gif';
+$dominos->open = 'open';
 
-$cadillac = new Store();	
-$cadillac->name = 'cadillac';
-$cadillac->title = 'Cadillac';
-$cadillac->img = 'http://farm8.staticflickr.com/7281/8739392798_fabd322beb_m.jpg';
+$jack_in_the_box= new Store();	
+$jack_in_the_box->name = 'jack in the box';
+$jack_in_the_box->title = 'Jack In The Box';
+$jack_in_the_box->img = 'logos/fast_food/jack_in_the_box.png';
+$jack_in_the_box->open = 'closed';
+
+$kfc= new Store();	
+$kfc->name = 'kentucky fried chicken';
+$kfc->title = 'Kentucky Fried Chicken';
+$kfc->img = 'logos/fast_food/kfc.gif';
+$kfc->open = 'open';
 
 $pizza_hut = new Store();	
 $pizza_hut->name = 'pizza_hut';
 $pizza_hut->title = 'Pizza Hut';
-$pizza_hut->img = 'http://farm8.staticflickr.com/7287/8736588667_543ff6e016_m.jpg';
+$pizza_hut->img = 'logos/fast_food/pizza_hut.gif';
+$pizza_hut->open = 'open';
 
-$michelin = new Store();	
-$michelin->name = 'michelin';
-$michelin->title = 'Michelin';
-$michelin->img = 'http://farm8.staticflickr.com/7282/8739392808_2126354980_m.jpg';
+$mcdonalds= new Store();	
+$mcdonalds->name = 'mcdonalds';
+$mcdonalds->title = 'Mcdonalds';
+$mcdonalds->img = 'logos/fast_food/mcdonalds.gif';
+$mcdonalds->open = 'open';
 
-$british_petroleum = new Store();	
-$british_petroleum->name = 'british_petroleum';
-$british_petroleum->title = 'British Petroleum';
-$british_petroleum->img = 'http://farm8.staticflickr.com/7283/8737706610_df8b49ea77_m.jpg';
-
+$panera_bread= new Store();	
+$panera_bread->name = 'panera bread';
+$panera_bread->title = 'Panera Bread';
+$panera_bread->img = 'logos/fast_food/panera_bread.gif';
+$panera_bread->open = 'open';
 
 $dunkin_donuts = new Store();	
 $dunkin_donuts->name = 'dunkin_donuts';
 $dunkin_donuts->title = 'Dunkin Donuts';
-$dunkin_donuts->img = 'http://farm8.staticflickr.com/7288/8738273511_5946f44287_m.jpg';
+$dunkin_donuts->img = 'logos/fast_food/dunkin_donuts.gif';
+$dunkin_donuts->open = 'open';
 
+$sonic= new Store();	
+$sonic->name = 'sonic drive in';
+$sonic->title = 'Sonic Drive In';
+$sonic->img = 'logos/fast_food/sonic.gif';
+$sonic->open = 'open';
 
-$land_rover = new Store();	
-$land_rover->name = 'land_rover';
-$land_rover->title = 'Land Rover';
-$land_rover->img = 'http://farm8.staticflickr.com/7288/8739392818_940df696f4_m.jpg';
+$subway= new Store();	
+$subway->name = 'subway';
+$subway->title = 'Subway';
+$subway->img = 'logos/fast_food/subway.gif';
+$subway->open = 'open';
 
-
-$chevrolet = new Store();	
-$chevrolet->name = 'chevrolet';
-$chevrolet->title = 'Chevrolet';
-$chevrolet->img = 'http://farm8.staticflickr.com/7287/8738273523_3a739ce064_m.jpg';
-
-$stores = array($starbucks, $target, $ups, $office_depot, $ferrari, $cadillac, $pizza_hut, $michelin, $british_petroleum, $dunkin_donuts, $land_rover, $chevrolet);
+$stores = array($starbucks, $burger_king, $chick_fil_a, $chipotle, $dominos, $jack_in_the_box, $kfc, $pizza_hut, $mcdonalds, $panera_bread, $sonic, $subway, /*$dunkin_donuts */);
 
 echo json_encode($stores);
 

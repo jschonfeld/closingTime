@@ -15,7 +15,8 @@
     </div>
     <div class="clear"></div>
     <div id="category_bar">
-        <div id="category_list"> <span class="category" id="food">Food</span>
+    <div id="category_list"> 
+ <span class="category" id="food">Food</span>
  <span class="category" id="health_home">Health and Home</span>
  <span class="category" id="finance">Finance</span>
  <span class="category" id="gas">Auto and Gas</span>
@@ -28,7 +29,16 @@
         <div class="grid_7" id="result_tab">
            
         </div>
-        <div class="grid_5" id="info_panel"></div>
+        <div class="grid_5" id="info_panel">
+
+            <div  id="sort_by">
+               <span class="sorter" id="open_now">Open Now</span>
+               <span class="sorter" id="opens">Opening Time</span>
+               <span class="sorter" id="closes">Closing Time</span>
+               <span class="sorter" id="distance">Distance</span>
+           </div>
+
+        </div>
 		
 		
         <div class="grid_7 push_1" id="click_to_slide">
@@ -61,12 +71,12 @@ $("input").keypress(function (evt) {
                   return false;
                     }
       });
-
-//Click Submit to see a sample result
-$("#submit").click(function(){
+//////////////////////////////********************///////////////////////////
+//Click Food to see a sample food result
+$("#food").click(function(){
 $('#result_tab').empty();
 });
-                $("#submit").click(function(){
+                $("#food").click(function(){
      $(function()             {$.getJSON('json-data.php',{category: $('.location_field').val()}, function(data) {
                    $(data).each(function(k,v){        
                        /*$('<img>',{
@@ -84,7 +94,109 @@ $('#result_tab').empty();
                                      });
                                });
                         });   
+//////////////////////////////********************///////////////////////////
+//Click finance to see a sample finance result (banks)
+$("#finance").click(function(){
+$('#result_tab').empty();
+});
+                $("#finance").click(function(){
+     $(function()             {$.getJSON('banks.php',{category: $('.location_field').val()}, function(data) {
+                   $(data).each(function(k,v){        
+                      
+                          $('<figure>').html('\
+					<img class="'+v.open+'" title="'+v.title+'"  src="'+v.img+'" />\
+					<figcaption>'+v.open+'</figcaption>')
+                                        .appendTo($('#result_tab'));
 
+                                             })
+                                     });
+                               });
+                        });   
+
+//////////////////////////////********************///////////////////////////
+//Sort the list by open now
+
+$("#open_now").click(function(){
+$('#result_tab').empty();
+});
+                $("#open_now").click(function(){
+     $(function()             {$.getJSON('json-open_now.php',{category: $('.location_field').val()}, function(data) {
+                   $(data).each(function(k,v){  
+                          $('<figure>').html('\
+					<img class="'+v.open+'" title="'+v.title+'"  src="'+v.img+'" />\
+					<figcaption>'+v.open+'</figcaption>')
+                                        .appendTo($('#result_tab'));
+
+                                             })
+                                     });
+                               });
+                        });  
+
+//////////////////////////////********************///////////////////////////
+//Sort the list by closing time
+
+$("#closes").click(function(){
+$('#result_tab').empty();
+});
+                $("#closes").click(function(){
+     $(function()             {$.getJSON('json-closes.php',{category: $('.location_field').val()}, function(data) {
+                   $(data).each(function(k,v){        
+                       /*$('<img>',{
+                           class:v.open,
+                           title:v.title,
+                           src:v.img
+                           
+                                  })*/
+                          $('<figure>').html('\
+					<img class="'+v.open+'" title="'+v.title+'"  src="'+v.img+'" />\
+					<figcaption>'+v.closes+'</figcaption>')
+                                        .appendTo($('#result_tab'));
+
+                                             })
+                                     });
+                               });
+                        });   
+//////////////////////////////********************///////////////////////////
+//Sort the list by opening time
+
+//Click Submit to see a sample result
+$("#opens").click(function(){
+$('#result_tab').empty();
+});
+                $("#opens").click(function(){
+     $(function()             {$.getJSON('json-opens.php',{category: $('.location_field').val()}, function(data) {
+                   $(data).each(function(k,v){        
+                      
+                          $('<figure>').html('\
+					<img class="'+v.open+'" title="'+v.title+'"  src="'+v.img+'" />\
+					<figcaption>'+v.opens+'</figcaption>')
+                                        .appendTo($('#result_tab'));
+
+                                             })
+                                     });
+                               });
+                        });   
+//////////////////////////////********************///////////////////////////
+//Sort the list by distance
+
+$("#distance").click(function(){
+$('#result_tab').empty();
+});
+                $("#distance").click(function(){
+     $(function()             {$.getJSON('json-data.php',{category: $('.location_field').val()}, function(data) {
+                   $(data).each(function(k,v){        
+                      
+                          $('<figure>').html('\
+					<img class="'+v.open+'" title="'+v.title+'"  src="'+v.img+'" />\
+					<figcaption>'+v.opens+'</figcaption>')
+                                        .appendTo($('#result_tab'));
+
+                                             })
+                                     });
+                               });
+                        });
+
+///////////////////**************************////////////////////////////////
 // Click a category
 
 //Clear the result_tab
@@ -115,15 +227,33 @@ $(document).ready(function () {
             $(this).addClass('active'); 
             $('#slide_me_down').html(me.attr('id'));
         }
-       
     }); 
-                               
-   /*  $('#finance').live('click', function () { 
-         $('#slide_me_down').slideToggle();     
-     });                               
-                               
-   */
 });
+////////////////////*****************//////////////////
+//Loading the weekly schedule into the Week slider Div
+
+
+                $('.day').click(function(){
+     $(function()             {$.getJSON('json-opens.php',{category: $('.location_field').val()}, function(data) {
+                   $(data).each(function(k,v){        
+                       /*$('<img>',{
+                           class:v.open,
+                           title:v.title,
+                           src:v.img
+                           
+                                  })*/
+                          $('<figure>').html('\
+					<img class="'+v.open+'" title="'+v.title+'"  src="'+v.img+'" />\
+					<figcaption>'+v.opens+'</figcaption>')
+                                        .appendTo($('#slide_me_down'));
+
+                                             })
+                                     });
+                               });
+                        });   
+
+
+
 </script>
 
 </body>
